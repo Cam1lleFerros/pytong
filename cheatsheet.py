@@ -77,3 +77,46 @@ for x in dish:
     print(x)
     #.union jak do czegos innego bez zmieniania
 #/difference zeby porownac
+capitals={"Usa":"washington","india":"new dehli","rosja":"moskwa"}
+print(capitals["rosja"])
+print(capitals.get("niemcy"))
+print(capitals.keys())
+print(capitals.values())
+for key,value in capitals.items():
+    print(key,value)
+capitals.update({"niemcy":"berlin"})
+capitals.update({"Usa":"LA"})
+capitals.pop("india")
+for key, value in capitals.items():
+    print(key, value)
+capitals.clear()
+name="mikolaj Gladkowski"
+if(name[0].islower()):
+    name=name.capitalize()
+print(name)
+firstname=name[0:3].upper()
+lastname=name[4:].lower()
+print(lastname,firstname)
+lastchar=name[-1]
+def hello(imie,imi):
+    print("hi "+imie+imi)
+    print("glhf")
+hello("zią","")
+hello(food[0],"sweet")
+def retfun(licz,licz2):
+    return licz*licz2*licz2
+print(retfun(licz2=2,licz=3))
+#print(round(abs(float(input()))))
+def add(*args): # tuple
+    sum=0
+    args=list(args)
+    args[0]=0
+    for i in args:
+        sum+=i
+    return sum
+print(add(2,1,3,7))
+def elo(**kwargs):
+    print( "elo "+kwargs['first']+kwargs['last'])
+    for key,value in kwargs.items():
+        print(value,end=" ")
+elo(first="kgla",middle="mgla",last="przyjaciel")
