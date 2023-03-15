@@ -120,3 +120,21 @@ def elo(**kwargs):
     for key,value in kwargs.items():
         print(value,end=" ")
 elo(first="kgla",middle="mgla",last="przyjaciel")
+try: 
+    numerator=int(input("divide"))
+    divider=int(input("divider"))
+    result=numerator/divider
+    
+except ZeroDivisionError as e:
+    print(e)
+    print("cant divide by zero")
+except ValueError as e:
+    print (e)
+    print ("zle podana wartosc")
+except Exception as e:
+    print(e)
+    print("oops error") 
+else:
+    print(result)
+finally:
+    print("to bedize zawsze")
